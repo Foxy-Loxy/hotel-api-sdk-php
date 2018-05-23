@@ -45,18 +45,20 @@ abstract class DataContainer
 
         $type = $this->validFields[$field];
 
+
+
         if (empty($type))
             $this->fields[$field] = $value;
 
         if (is_object($value)) {
             if (get_class($value) !== $type)
                 throw new \Exception("Type error: Field $field needs $type class type: ".get_class($value));
-
             if (!is_a($value, $type))
                 throw new \Exception("Type error: Field $field needs $type class type!");
-        } else if (gettype($value) !== $type)
+        } else if (gettype($value) !== $type) {
+            dd($value, $type);
             throw new \Exception("Type error: Field $field needs $type type!");
-
+        }
         $this->fields[$field] = $value;
     }
 
