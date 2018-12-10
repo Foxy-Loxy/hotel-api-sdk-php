@@ -7,7 +7,6 @@
  */
 
 namespace hotelbeds\hotel_api_sdk\helpers;
-use hotelbeds\hotel_api_sdk\model\Accommodations;
 use hotelbeds\hotel_api_sdk\model\Destination;
 use hotelbeds\hotel_api_sdk\model\Filter;
 use hotelbeds\hotel_api_sdk\model\Geolocation;
